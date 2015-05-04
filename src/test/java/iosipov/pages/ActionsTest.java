@@ -35,10 +35,16 @@ public class ActionsTest extends iosipov.pages.TestBase {
 	    //perehod na formu Add
 	    WebElement addBtn = driver.findElement(By.cssSelector("img[alt=\"Add movie\"]"));
 	    addBtn.click();
+	    
+	    //WebElement imdId = driver.findElement(By.name("imdbid"));
+	    //imdId.sendKeys("");
+	    WebElement nameField = driver.findElement(By.name("name"));
+	    nameField.sendKeys("Test movie 1");
+	    driver.findElement(By.name("year")).sendKeys("2015");
 	    WebElement submitBtn = driver.findElement(By.id("submit"));
 	    submitBtn.click();
 	    
-	    driver.quit();
+	    //driver.quit();
 	}
 	
 	  private boolean isElementPresent(By by) {
